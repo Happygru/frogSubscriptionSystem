@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --site-main-color-one: #0f8093;
+  --site-main-color-two: #430c4d;
+}
+
+.radius {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gradient-border-solid {
+  border-left: 2px solid #0f8093;
+  border-right: 2px solid #430c4d;
+  background-image: linear-gradient(90deg, #0f8093, #430c4d),
+    linear-gradient(90deg, #0f8093, #430c4d);
+  background-size: 100% 2px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.gradient-border-solid-swap {
+  border-right: 2px solid #0f8093;
+  border-left: 2px solid #430c4d;
+  background-image: linear-gradient(90deg, #430c4d, #0f8093),
+    linear-gradient(90deg, #430c4d, #0f8093);
+  background-size: 100% 2px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.gradient-border-dashed {
+  border-left: 2px dashed #0f8093;
+  border-right: 2px dashed #430c4d;
+  background-image: repeating-linear-gradient(
+      90deg,
+      #430c4d,
+      #0f8093,
+      transparent 4%
+    ),
+    repeating-linear-gradient(90deg, #0f8093, #430c4d, transparent 4%);
+  background-size: 100% 2px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+  height: 6px;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-track {
+  background-image: linear-gradient(
+    to top,
+    transparent,
+    rgba(0, 213, 251, 0.8)
+  );
+  border-radius: 20px;
+  height: 100px;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* creates padding around scroll thumb */
+  cursor: pointer;
+}
+
+.template-dots > li {
+  width: 15px;
+  height: 15px;
+}
+
+.template-dots > li button {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.template-dots > li button:before {
+  width: 15px;
+  height: 15px;
+  line-height: 16px;
+}
+
+#sidebar .slick-arrow {
+  position: absolute;
+}
+
+#sidebar .slick-arrow.slick-next {
+  right: -16px;
+}
+
+#sidebar .slick-arrow.slick-prev {
+  left: -16px;
+}

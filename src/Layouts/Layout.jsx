@@ -163,7 +163,7 @@ const Layout = () => {
         </div>
       </div>
       <div className="fixed bottom-0 left-0 w-full pr-8 text-right text-lg font-bold text-white">
-        &copy;2023, Appbotlab Teams. All rights reserved.
+        &copy;2023, Scantech Teams. All rights reserved.
       </div>
     </div>
   );

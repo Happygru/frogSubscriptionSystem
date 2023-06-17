@@ -21,7 +21,7 @@ const Layout = () => {
             <h1 className="text-center text-6xl font-bold leading-[70px] tracking-wide text-[white]">
               With{" "}
               <span className="bg-gradient-to-tr from-[#06DBFF] to-[#CA3DE3] bg-clip-text text-transparent">
-                AppBotLob
+                Scantech
               </span>
             </h1>
           </div>

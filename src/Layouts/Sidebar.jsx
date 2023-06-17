@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import ABLMenuItem from "@/Components/ABLMenuItem";
 import { StarIcon } from "@heroicons/react/24/solid";
 import {
-  HiOutlineLightningBolt,
-  HiOutlineDatabase,
-  HiWifi,
-  HiOutlinePlus,
+  HiOutlinePresentationChartLine,
+  HiOutlineUserGroup,
+  HiOutlineHome,
+  HiOutlineCog,
+  HiOutlineUser,
 } from "react-icons/hi";
+import { SiPowerapps } from "react-icons/si";
 import { useLocation } from "react-router-dom";
 import {
   Card,
@@ -34,19 +36,34 @@ const Sidebar = () => {
   };
 
   const menuLists = [
-    { label: "App", icon: <HiWifi />, href: "/", key: ["/", "/newapp"] },
     {
-      label: "Template Library",
-      icon: <HiOutlineDatabase />,
-      href: "/templates",
-      key: ["/templates"],
+      label: "Dashboard", icon: <HiOutlineHome />, href: "/", key: ["/"]
+    },
+    { label: "Apps", icon: <SiPowerapps />, href: "/apps", key: ["/apps"] },
+    {
+      label: "Customers",
+      icon: <HiOutlineUserGroup />,
+      href: "/customers",
+      key: ["/customers"],
     },
     {
-      label: "Subscription",
-      icon: <HiOutlineLightningBolt />,
-      href: "/subscription",
-      key: ["/subscription"],
+      label: "Statistics",
+      icon: <HiOutlinePresentationChartLine />,
+      href: "/Statistics",
+      key: ["/Statistics"],
     },
+    {
+      label: "Accounts",
+      icon: <HiOutlineUser />,
+      href: "/accounts",
+      key: ["/accounts"],
+    },
+    {
+      label: "Settings",
+      icon: <HiOutlineCog />,
+      href: "/settings",
+      key: ["/settings"],
+    }
   ];
 
   return (
@@ -56,7 +73,7 @@ const Sidebar = () => {
         to="/"
       >
         <img src="img/logo.svg" className="h-[50px]" />
-        <h2 className="text-2xl font-bold text-white">Appbotlab</h2>
+        <h2 className="text-2xl font-bold text-white">Frog System</h2>
       </Link>
       <div className="relative flex h-[calc(100%-70px)] w-full flex-col items-center justify-between py-[20px]">
         <div className="w-full">
@@ -73,7 +90,7 @@ const Sidebar = () => {
             );
           })}
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <Slider {...settings} className="w-full">
             <Card
               color="transparent"
@@ -202,7 +219,7 @@ const Sidebar = () => {
             selected={true}
             href={"/newapp"}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

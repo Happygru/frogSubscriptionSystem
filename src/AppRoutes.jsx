@@ -1,44 +1,44 @@
 import Layout from "./Layouts/Layout";
 import AuthLayout from "./Layouts/AuthLayout";
 import App from "./pages/App";
-import NewApp from "./pages/App/New";
 import SignIn from "./pages/Auth/signin";
 import SignUp from "./pages/Auth/signup";
-import Templates from "./pages/Templates";
 import NotFoundPage from "./pages/NotFoundPage";
-import Subscription from "./pages/Subscription";
-import Profile from "./pages/Profile";
-import Example from './pages/Example';
+import Dashboard from "./pages/Dashboard";
+import Customer from "./pages/Customer";
+import Statistics from "./pages/Statistics";
+import Accounts from "./pages/Accounts";
+import Settings from "./pages/Settings"
 
 const AppRoutes = [
-  {
-    path: '/example',
-    element: <Example />
-  },
   {
     path: "/",
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: '/',
+        element: <Dashboard />
+      },
+      {
+        path: 'customers',
+        element: <Customer />
+      },
+      {
+        path: "/apps",
         element: <App />,
       },
       {
-        path: "/newapp",
-        element: <NewApp />,
+        path: "/statistics",
+        element: <Statistics />
       },
       {
-        path: "/templates",
-        element: <Templates />,
+        path: "/accounts",
+        element: <Accounts />
       },
       {
-        path: "/subscription",
-        element: <Subscription />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
-      },
+        path: "/settings",
+        element: <Settings />
+      }
     ],
   },
   {
