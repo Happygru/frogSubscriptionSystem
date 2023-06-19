@@ -79,9 +79,9 @@ const Layout = () => {
           </IconButton>
           <Sidebar />
         </div>
-        <div className="gradient-border-solid-swap flex h-full w-full w-full flex-col bg-[rgba(0,0,0,0.2)] transition-all tablet:w-[calc(100%-250px)]">
+        <div className="gradient-border-solid-swap flex h-full w-full flex-col bg-[rgba(0,0,0,0.2)] transition-all tablet:w-[calc(100%-250px)]">
           <div className="flex h-[80px] w-full items-center justify-between px-[30px]">
-            <h1 className="grow text-2xl font-bold text-white">Apps</h1>
+            <h1 className="grow text-2xl font-bold text-white"></h1>
             <div className="flex grow-0 items-end justify-end gap-10">
               <div className="hidden max-w-[300px] pb-2 laptop:block">
                 <ABLInput
@@ -157,7 +157,7 @@ const Layout = () => {
               </div>
             </div>
           </div>
-          <div className="h-[calc(100%-80px)] overflow-y-auto p-[30px]">
+          <div className="h-[calc(100%-80px)] overflow-y-auto p-[30px] pt-0">
             <Outlet />
           </div>
         </div>

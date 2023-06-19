@@ -41,13 +41,13 @@ const Sidebar = () => {
     },
     { label: "Apps", icon: <SiPowerapps />, href: "/apps", key: ["/apps"] },
     {
-      label: "Customers",
+      label: "Customer Form",
       icon: <HiOutlineUserGroup />,
       href: "/customers",
       key: ["/customers"],
     },
     {
-      label: "Statistics",
+      label: "Customers",
       icon: <HiOutlinePresentationChartLine />,
       href: "/Statistics",
       key: ["/Statistics"],
